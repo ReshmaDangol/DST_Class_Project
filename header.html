@@ -18,7 +18,7 @@
             var start = date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
             var res = date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             $("#predictdate").datepicker({ minDate: new Date(start), maxDate: new Date(res), dateFormat: 'yy-mm-dd', });
-
+            $("#pastdate").datepicker({ maxDate: new Date() });
             $('#predict').click(function () {
                 var cluster = $('.chooseClusterActive').text();
 
@@ -189,6 +189,7 @@
                         <ul class="nav navbar-nav pull-right">
                             <li class="active"><a href="index.php">Call Prediction</a></li>
                             <li class="active"><a href="history.php">History</a></li>
+                            <li class="active"><a href="update.php">Update Call Log</a></li>
 
                         </ul>
                     </div>
