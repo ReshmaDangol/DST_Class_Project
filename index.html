@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="js/jquery-1.12.4.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <script src="js/jquery-ui.js"></script>
+    <script>
+  $( function() {
+      $("#predictdate").datepicker();
+      $.get("server.php", function (data) {
+          alert(data);
+      });
+
+  } );
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+           
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="col-lg-offset-2 col-lg-8">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">WebSiteName</a>
+                            </div>
+                            <ul class="nav navbar-nav pull-right">
+                                <li class="active"><a href="#">Call Prediction</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>          
+        </div>
+
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-8">
+                Date 
+                <input type="text" name="predictdate" id="predictdate" />
+
+            </div>
+        </div>
+
+        <div class="row panel-footer text-center">
+            Decision Support Technology
+        </div>
+    </div>
+</body>
+</html>
